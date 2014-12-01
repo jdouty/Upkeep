@@ -1,22 +1,18 @@
 package com.gmail.kludgeworks.upkeep;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity
@@ -42,18 +38,34 @@ public class MainActivity extends ActionBarActivity
         mTitle = getTitle();
 
         // Set up the drawer.
-        mNavigationDrawerFragment.setUp(
-                R.id.navigation_drawer,
+        mNavigationDrawerFragment.setUp(R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+
+        Fragment fragment;
+
+        // Changes the fragment based on the selected item
+        // Else statement attempts to recover if an unknown position is given by
+        // defaulting to the accounts view
+        if (position == 0) {
+            Toast.makeText(this, "This is a test", Toast.LENGTH_SHORT).show();
+            fragment = new AccountFragment();
+        } else {
+            fragment = new AccountFragment();
+            position=0;
+        }
+
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, fragment)
                 .commit();
+        //fragmentManager.beginTransaction()
+        //        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+        //        .commit();
     }
 
     public void onSectionAttached(int number) {
