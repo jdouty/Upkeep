@@ -1,6 +1,7 @@
 package com.gmail.kludgeworks.upkeep;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -248,8 +249,9 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.create_account) {
+            Toast.makeText(getActivity(), "Create New Account.", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), CreateAccountActivity.class));
             return true;
         }
 

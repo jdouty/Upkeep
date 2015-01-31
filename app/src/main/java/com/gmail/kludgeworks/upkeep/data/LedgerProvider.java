@@ -17,10 +17,7 @@ public class LedgerProvider extends ContentProvider {
     private LedgerDbHelper mOpenHelper;
 
     private static final int ACCOUNT = 100;
-    private static final int WEATHER_WITH_LOCATION = 101;
-    private static final int WEATHER_WITH_LOCATION_AND_DATE = 102;
     private static final int TRANSACTION = 300;
-    private static final int LOCATION_ID = 301;
 
     private static final SQLiteQueryBuilder sAccountQueryBuilder;
 
