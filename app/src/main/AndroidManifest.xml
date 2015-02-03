@@ -24,6 +24,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.gmail.kludgeworks.upkeep.MainActivity" />
         </activity>
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".data.LedgerProvider"
+            android:exported="false"
+            android:syncable="true"/>
     </application>
 
 </manifest>

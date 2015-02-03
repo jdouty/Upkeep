@@ -7,38 +7,40 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
         android:inputType="textPersonName"
         android:hint="Account Name"
         android:ems="10"
-        android:id="@+id/editText" />
+        android:id="@+id/create_account_name_edittext" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
         android:inputType="numberDecimal|numberSigned"
         android:hint="Starting Balance"
         android:ems="10"
-        android:id="@+id/editText2" />
+        android:id="@+id/create_account_balance_edittext" />
 
+    <View style="@style/Divider"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:id="@+id/spinner"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/create_account_type_spinner"
         android:entries="@array/account_type_arrays"
         android:prompt="@string/account_type_prompt"
         android:spinnerMode="dropdown"/>
+    <View style="@style/Divider"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
         android:hint="Notes"
-        android:id="@+id/editText3" />
+        android:id="@+id/create_account_notes_edittext" />
 </LinearLayout>

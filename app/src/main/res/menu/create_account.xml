@@ -2,6 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.gmail.kludgeworks.upkeep.CreateAccountActivity" >
+
+    <item
+        android:id="@+id/save_account"
+        android:title="@string/save_account"
+        app:showAsAction="always" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"

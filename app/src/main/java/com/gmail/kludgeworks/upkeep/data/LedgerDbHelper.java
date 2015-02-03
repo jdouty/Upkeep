@@ -44,7 +44,7 @@ public class LedgerDbHelper extends SQLiteOpenHelper {
 
                 // Set up the Account Name column as a foreign key to Accounts table.
                 " FOREIGN KEY (" + TransactionsEntry.COLUMN_ACCT_NM + ") REFERENCES " +
-                AccountsEntry.TABLE_NAME + " (" + AccountsEntry.COLUMN_ACCT_NM + "), " +
+                AccountsEntry.TABLE_NAME + " (" + AccountsEntry.COLUMN_ACCT_NM + ")" +
                 " );";
 
         sqLiteDatabase.execSQL(SQL_CREATE_ACCOUNTS_TABLE);
